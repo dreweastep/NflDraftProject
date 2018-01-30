@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NFLDraft
 {
-    class CoachPicks
+    class NflDraft
     {
         //DECLARATIONS
 
@@ -58,5 +58,14 @@ namespace NFLDraft
         /*7*/    "Line Backers", 
         /*8*/    "Offensive Tackle" 
         };
+        public void Draft()
+        {
+
+        }
+        public string HouseKeeping()
+        {
+
+        }
+
     }
 }

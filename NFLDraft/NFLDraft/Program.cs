@@ -10,6 +10,8 @@ namespace NFLDraft
     {
         static void Main(string[] args)
         {
+            NflDraft draft = new NflDraft();
+            draft.Draft();
         }
     }
 }

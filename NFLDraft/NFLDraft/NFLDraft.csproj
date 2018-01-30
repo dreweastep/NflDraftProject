@@ -43,7 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="CoachPicks.cs" />
+    <Compile Include="NflDraft.cs" />
+    <Compile Include="Coach.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Players.cs" />
     <Compile Include="Program.cs" />

@@ -8,12 +8,22 @@ namespace NFLDraft
 {
     public class Player
     {
+        //DECLARATIONS
         public string playerName { get; }
         public string playerCollege { get; }
         public string playerPosition { get; }
         public int playerSalary { get; }
-        public bool isDrafted { get; set; }
+        public bool isDrafted = false;
 
+        public bool GetIsDrafted()
+        {
+            return isDrafted;
+        }
+
+        public void SetIsDrafted()
+        {
+            isDrafted = true;
+        }
         public Player(string name, string college, string position, int salary)
         {
             playerName = name;
