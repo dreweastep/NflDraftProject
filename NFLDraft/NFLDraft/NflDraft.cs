@@ -69,7 +69,11 @@ namespace NFLDraft
         //BEGIN PROGRAM
         public void Draft()
         {
-
+            InitializePlayers();
+            foreach (Player player in availablePlayers)
+            {
+                Console.WriteLine(player.playerName);
+            }
         }
         private void InitializePlayers()
         {
@@ -85,11 +89,11 @@ namespace NFLDraft
         }
         private bool HouseKeeping()
         {
-
+            return true;
         }
         private string NewCoach()
         {
-
+            return "PLACEHOLDER";
         }
         private void DisplayTable()
         {
@@ -97,7 +101,7 @@ namespace NFLDraft
         }
         private string FilterPosition()
         {
-
+            return "PLACEHOLDER";
         }
         private void DisplayPosition()
         {
@@ -105,11 +109,11 @@ namespace NFLDraft
         }
         private int ChoosePlayer()
         {
-
+            return 0;
         }
         private bool CheckAvailibility()
         {
-
+            return true;
         }
         private void ChangePlayerStatus()
         {
@@ -117,23 +121,23 @@ namespace NFLDraft
         }
         private bool CheckForOptimalDraft()
         {
-
+            return true;
         }
         private int CheckBudget()
         {
-
+            return 0;
         }
         private int ChangeTextBackground()
         {
-
+            return 0;
         }
         private int DisplayCurrentBudget()
         {
-
+            return 0;
         }
         private int DisplaySpentBudget()
         {
-
+            return 0;
         }
         private void EndDraft()
         {
