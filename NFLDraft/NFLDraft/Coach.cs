@@ -10,18 +10,9 @@ namespace NFLDraft
     {
         //DECLARATIONS
         public string coachTeam { get; }
-        public List<string> draftedPlayers = new List<string>();
-        public int budgetRemaining = 95000000;
-
-        public int GetBudgetRemaining()
-        {
-            return budgetRemaining;
-        }
-        public void SpendBudget(int salarySpent)
-        {
-            budgetRemaining -= salarySpent;
-        }
-
+        public List<Player> draftedPlayers = new List<Player>();
+        public int budgetRemaining { get; set; } = 95000000;
+        
         public Coach(string team)
         {
             coachTeam = team;

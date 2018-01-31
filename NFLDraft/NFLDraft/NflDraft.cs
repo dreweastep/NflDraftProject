@@ -10,16 +10,20 @@ namespace NFLDraft
     {
         //DECLARATIONS
 
-        string[, ] playerNames = new string[,]
+        bool exitCondition = false;
+        List<Coach> coachesDrafting = new List<Coach>();
+        List<Player> availablePlayers = new List<Player>();
+
+        string[,] names = new string[,]
         {
-        /*1*/    {"MasonRudolph", "Lamar Jackson", "Josh Rosen", "Sam Darnold", "Baker Mayfield"},
-        /*2*/    {"Saquon Barkley", "Derrius Guice", "Bryce Love", "Ronald Jones II", "Damien Harris"},
-        /*3*/    {"Courtland Sutton", "James Washington", "Marcell Ateman", "Anthony Miller", "Calvin Ridley"},
-        /*4*/    {"Maurice Hurst", "Vita Vea", "Taven Bryan", "Da'Ron Payne", "Harrison Phillips"},
-        /*5*/    {"Joshua Jackson", "Derwin James", "Denzel Ward", "Minkah Fitzpatrick", "Isaiah Oliver"},
-        /*6*/    {"Mark Andrews", "Dallas Goedert", "Jaylen Samuels", "Mike Gesicki", "Troy Fumagall"},
-        /*7*/    {"Roquan Smith", "Tremaine Edmunds", "Kendall Joseph", "Dorian O'Daniel", "Malik Jeffers"},
-        /*8*/    {"Orlando Brown", "Kolton Miller", "Chukwuma Okorafor", "Connor Williams", "Mike McGlinchey"}
+        /*1*/    {/*1*/"MasonRudolph", /*2*/"Lamar Jackson", /*3*/"Josh Rosen", /*4*/"Sam Darnold", /*5*/"Baker Mayfield"},
+        /*2*/    {/*6*/"Saquon Barkley", /*7*/"Derrius Guice", /*8*/"Bryce Love", /*9*/"Ronald Jones II", /*10*/"Damien Harris"},
+        /*3*/    {/*11*/"Courtland Sutton", /*12*/"James Washington", /*13*/"Marcell Ateman", /*14*/"Anthony Miller", /*15*/"Calvin Ridley"},
+        /*4*/    {/*16*/"Maurice Hurst", /*17*/"Vita Vea", /*18*/"Taven Bryan", /*19*/"Da'Ron Payne", /*20*/"Harrison Phillips"},
+        /*5*/    {/*21*/"Joshua Jackson", /*22*/"Derwin James", /*23*/"Denzel Ward", /*24*/"Minkah Fitzpatrick", /*25*/"Isaiah Oliver"},
+        /*6*/    {/*26*/"Mark Andrews", /*27*/"Dallas Goedert", /*28*/"Jaylen Samuels", /*29*/"Mike Gesicki", /*30*/"Troy Fumagall"},
+        /*7*/    {/*31*/"Roquan Smith", /*32*/"Tremaine Edmunds", /*33*/"Kendall Joseph", /*34*/"Dorian O'Daniel", /*35*/"Malik Jeffers"},
+        /*8*/    {/*36*/"Orlando Brown", /*37*/"Kolton Miller", /*38*/"Chukwuma Okorafor", /*39*/"Connor Williams", /*40*/"Mike McGlinchey"}
         };
 
         string[,] colleges = new string[,]
@@ -34,7 +38,7 @@ namespace NFLDraft
         /*8*/    {"(Oklahoma)", "(UCLA)", "(Western Michigan)", "(Texas)","(Notre Dame)"}
         };
 
-        int[,] salary = new int[,]
+        int[,] salaries = new int[,]
         {
         /*1*/    {26400100, 20300100, 17420300, 13100145, 10300000},
         /*2*/    {24500100, 19890200, 18700800, 15000000, 11600400},
@@ -47,7 +51,7 @@ namespace NFLDraft
 
         };
 
-        string[] position = new string[]
+        string[] positions = new string[]
         {
         /*1*/    "Quarterback", 
         /*2*/    "Running Back", 
@@ -56,13 +60,82 @@ namespace NFLDraft
         /*5*/    "Defensive-Back",
         /*6*/    "Tight Ends", 
         /*7*/    "Line Backers", 
-        /*8*/    "Offensive Tackle" 
+        /*8*/    "Offensive Tackle"
         };
+
+        int[] ranks = new int[]
+        {1 ,2 ,3 ,4 ,5 };
+
+        //BEGIN PROGRAM
         public void Draft()
         {
 
         }
-        public string HouseKeeping()
+        private void InitializePlayers()
+        {
+            for (int row = 0; row < 8; row++)
+            {
+                for (int column = 0; column < 5; column++)
+                {
+
+                    Player player = new Player(names[row, column], colleges[row, column], salaries[row, column], positions[row], ranks[column]);
+                    availablePlayers.Add(player);
+                }
+            }
+        }
+        private bool HouseKeeping()
+        {
+
+        }
+        private string NewCoach()
+        {
+
+        }
+        private void DisplayTable()
+        {
+
+        }
+        private string FilterPosition()
+        {
+
+        }
+        private void DisplayPosition()
+        {
+
+        }
+        private int ChoosePlayer()
+        {
+
+        }
+        private bool CheckAvailibility()
+        {
+
+        }
+        private void ChangePlayerStatus()
+        {
+
+        }
+        private bool CheckForOptimalDraft()
+        {
+
+        }
+        private int CheckBudget()
+        {
+
+        }
+        private int ChangeTextBackground()
+        {
+
+        }
+        private int DisplayCurrentBudget()
+        {
+
+        }
+        private int DisplaySpentBudget()
+        {
+
+        }
+        private void EndDraft()
         {
 
         }

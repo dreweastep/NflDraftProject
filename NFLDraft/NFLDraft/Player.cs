@@ -11,25 +11,17 @@ namespace NFLDraft
         //DECLARATIONS
         public string playerName { get; }
         public string playerCollege { get; }
-        public string playerPosition { get; }
         public int playerSalary { get; }
-        public bool isDrafted = false;
-
-        public bool GetIsDrafted()
-        {
-            return isDrafted;
-        }
-
-        public void SetIsDrafted()
-        {
-            isDrafted = true;
-        }
-        public Player(string name, string college, string position, int salary)
+        public string playerPosition { get; }
+        public int playerRank { get; }
+        
+        public Player(string name, string college, int salary, string position, int rank)
         {
             playerName = name;
             playerCollege = college;
-            playerPosition = position;
             playerSalary = salary;
+            playerPosition = position;
+            playerRank = rank;
         }
     }
 }
