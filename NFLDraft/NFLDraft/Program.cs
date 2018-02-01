@@ -11,6 +11,7 @@ namespace NFLDraft
         static void Main(string[] args)
         {
             NflDraft draft = new NflDraft();
+            draft.InitializePlayers();
             draft.Draft();
         }
     }

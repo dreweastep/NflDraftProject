@@ -10,7 +10,8 @@ namespace NFLDraft
     {
         //DECLARATIONS
 
-        bool exitCondition = false;
+        bool exitProgram = false;
+        bool exitDraft = false;
         List<Coach> coachesDrafting = new List<Coach>();
         List<Player> availablePlayers = new List<Player>();
 
@@ -67,15 +68,7 @@ namespace NFLDraft
         {1 ,2 ,3 ,4 ,5 };
 
         //BEGIN PROGRAM
-        public void Draft()
-        {
-            InitializePlayers();
-            foreach (Player player in availablePlayers)
-            {
-                Console.WriteLine(player.playerName);
-            }
-        }
-        private void InitializePlayers()
+        public void InitializePlayers()
         {
             for (int row = 0; row < 8; row++)
             {
@@ -87,13 +80,32 @@ namespace NFLDraft
                 }
             }
         }
-        private bool HouseKeeping()
+        public void Draft()
         {
-            return true;
+            HouseKeeping();
         }
-        private string NewCoach()
+        private void HouseKeeping()
         {
-            return "PLACEHOLDER";
+            Console.WriteLine("Welcome to the NFL draft.\n");
+            Console.WriteLine("You are able to draft up to 5 players, but you have a budget of only $95 million dollars.");
+            Console.WriteLine("Would you like to begin the draft? (Y/N)");
+            string userInput = Console.ReadLine().ToUpper();
+
+            if (userInput == "Y" || userInput == "N")
+            {
+                if (userInput == "N")
+                {
+                    DisplayTeamPicks();
+                }
+            }
+            else
+            {
+                HouseKeeping();
+            }
+        }
+        private Coach NewCoach()
+        {
+            return null;
         }
         private void DisplayTable()
         {
@@ -142,6 +154,20 @@ namespace NFLDraft
         private void EndDraft()
         {
 
+        }
+        private void DisplayTeamPicks()
+        {
+            bool isEmpty = coachesDrafting.Any();
+            if (!isEmpty)
+            {
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Displayed is a list of the team's drafts:");
+                Console.ReadLine();
+            }
         }
 
     }
