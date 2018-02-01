@@ -83,6 +83,15 @@ namespace NFLDraft
         public void Draft()
         {
             HouseKeeping();
+            Console.Clear();
+
+            Coach currentCoach = NewCoach();
+            Console.Clear();
+
+            DisplayTable();
+
+            coachesDrafting.Add(currentCoach);
+            Console.ReadLine();
         }
         private void HouseKeeping()
         {
@@ -105,11 +114,22 @@ namespace NFLDraft
         }
         private Coach NewCoach()
         {
-            return null;
+            Console.WriteLine("Which team are you drafting for?");
+            string team = Console.ReadLine();
+
+            Coach coach = new Coach(team);
+            return coach;
         }
         private void DisplayTable()
         {
+            Console.WriteLine("Below is a list of all draftable players: \n");
+            WriteDivider();
 
+
+        }
+        private void WriteDivider()
+        {
+            Console.WriteLine(new string('-', 120));
         }
         private string FilterPosition()
         {
