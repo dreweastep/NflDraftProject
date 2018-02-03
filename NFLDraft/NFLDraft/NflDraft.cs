@@ -1111,8 +1111,6 @@ namespace NFLDraft
                 }
                 Console.WriteLine("Press any key to exit...");
                 Console.ReadLine();
-                Console.WriteLine("Press any key to exit...");
-                Console.ReadLine();
             }
         }
     }
